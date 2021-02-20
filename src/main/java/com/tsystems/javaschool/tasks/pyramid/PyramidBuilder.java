@@ -15,9 +15,6 @@ public class PyramidBuilder {
      */
     public int[][] buildPyramid(List<Integer> inputNumbers) {
         // TODO : Implement your solution here
-//        String a = null;
-//        if (Validation.fullValidation())
-//            throw new CannotBuildPyramidException();
         Validation.fullValidation(inputNumbers);
 
         // To count size of massive
@@ -39,7 +36,7 @@ public class PyramidBuilder {
         return result;
     }
 
-    public static int countOfRows(List<Integer> inputNumbers) {
+    private static int countOfRows(List<Integer> inputNumbers) {
         int countOfRows;
 
         // Use triangular number to count numbers of rows
@@ -49,7 +46,7 @@ public class PyramidBuilder {
         return countOfRows;
     }
 
-    public static int countOfColumns(int countOfRows) {
+    private static int countOfColumns(int countOfRows) {
         int countOfColumns = 1;
 
         if (countOfRows == 1)
@@ -59,7 +56,7 @@ public class PyramidBuilder {
         return countOfColumns;
     }
 
-    public static int[][] buildZeroMassive(int countOfRows, int countOfColumns) {
+    private static int[][] buildZeroMassive(int countOfRows, int countOfColumns) {
         int [][] massive = new int [countOfRows][countOfColumns];
 
         for (int i = 0; i < massive.length; i++) {
