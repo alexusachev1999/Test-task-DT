@@ -1,11 +1,5 @@
 package com.tsystems.javaschool.tasks.calculator;
 
-import javax.script.ScriptEngineManager;
-import java.io.PrintStream;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Stack;
 
 public class Calculator {
@@ -20,7 +14,7 @@ public class Calculator {
      */
     public String evaluate(String statement) {
         // TODO: Implement the logic here
-        String result = "result";
+        String result;
 
         // Checking for the null statement
          if (Validation.fullValidation(statement) == false){
@@ -28,9 +22,12 @@ public class Calculator {
          }
          else {
              Double resultInDouble = Calculator.RPNToAnswer(Calculator.ExpressionToRPN(statement));
+
+             // Validation for the division to zero
              if (resultInDouble == Double.MIN_VALUE)
                  return null;
              else {
+                 // Validation for type of answer
                  if (resultInDouble % 1 == 0) {
                      Integer resultInInteger = resultInDouble.intValue();
                      result = resultInInteger.toString();
@@ -42,7 +39,7 @@ public class Calculator {
     }
 
 
-
+    // This method converts the statement to Reverse Polish notation
     public static String ExpressionToRPN(String expression){
         String current ="";
         Stack<Character> stack = new Stack<>();
@@ -76,6 +73,8 @@ public class Calculator {
             current += stack.pop();
         return current;
     }
+
+    // This method calculates result from Reverse Polish Notation
     public static double RPNToAnswer(String RPN){
         String operand = new String();
         Stack<Double> stack = new Stack<>();
@@ -112,7 +111,7 @@ public class Calculator {
             return stack.pop();
     }
 
-
+    // This method return priority of math operators for creating RPN
     private static int getPriority (char token){
       if (token == '*' || token == '/')
           return 3;

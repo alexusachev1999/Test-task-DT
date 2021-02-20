@@ -31,7 +31,7 @@ public class Validation {
         return isValid;
     }
 
-
+    // Validation for the null expression
     private static boolean validationForNullStatement(String statement){
         boolean isValid = true;
         if (statement == null | statement == "")
@@ -40,6 +40,7 @@ public class Validation {
         return isValid;
     }
 
+    // Validation for the first correct symbol in the math expression
     private static boolean validationForFirstSymbol(String statement){
         boolean isValid = true;
         if (statement.startsWith("-")|statement.startsWith("/")|statement.startsWith("*")|statement.startsWith("+")
@@ -49,6 +50,7 @@ public class Validation {
         return isValid;
     }
 
+    // Validation for the incorrect separator for double number ( "." - correct, "," - incorrect)
     private static boolean validationForWrongNumberSeparator(String statement){
         boolean isValid = true;
 
@@ -61,6 +63,7 @@ public class Validation {
         return isValid;
     }
 
+    // Validation for correct brackets in the expression
     private static boolean validationForWrongBrackets(String statement){
         boolean isValid = true;
         int indexOfFirstBracket = statement.indexOf("(");
@@ -81,6 +84,7 @@ public class Validation {
         return isValid;
     }
 
+    // Validation for duplicates operators in the expression
     private static boolean validationForDoubleSymbols(String statement){
         boolean isValid = true;
         List<String> listOfSymbols = new ArrayList<>();

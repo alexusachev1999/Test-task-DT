@@ -36,6 +36,7 @@ public class PyramidBuilder {
         return result;
     }
 
+    // This method counts rows for needed massive
     private static int countOfRows(List<Integer> inputNumbers) {
         int countOfRows;
 
@@ -46,6 +47,7 @@ public class PyramidBuilder {
         return countOfRows;
     }
 
+    // This method counts columns for needed massive
     private static int countOfColumns(int countOfRows) {
         int countOfColumns = 1;
 
@@ -56,6 +58,7 @@ public class PyramidBuilder {
         return countOfColumns;
     }
 
+    // This method builds massive with zero elements
     private static int[][] buildZeroMassive(int countOfRows, int countOfColumns) {
         int [][] massive = new int [countOfRows][countOfColumns];
 
@@ -67,15 +70,7 @@ public class PyramidBuilder {
         return massive;
     }
 
-    public static void printMassive(int[][] massive) {
-        for (int i = 0; i < massive.length; i++) {
-            for (int j = 0; j < massive[i].length; j++) {
-                System.out.print(massive [i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
-
+    // This method solves square equation for counting rows
     private static int solutionOfSquareEquation (List<Integer> inputNumbers) {
         double a = 1, b = 1, c = inputNumbers.size() * - 2;
         double D;
@@ -90,7 +85,6 @@ public class PyramidBuilder {
                 result = x1;
             else if (x2 > 0)
                 result = x2;
-            //Return -1 to catch exception in main method
             else
                 result = -1;
         } else if (D == 0) {
@@ -105,6 +99,7 @@ public class PyramidBuilder {
         return (int) result;
     }
 
+    // This method build pyramid massive without side zeros
     private static int[][] pyramidWithoutSideZeros(List<Integer> inputNumbers, int countOfRows, int countOfColumns) {
         int indexOfElementInInput = inputNumbers.size() - 1;
 
@@ -120,6 +115,8 @@ public class PyramidBuilder {
         }
         return massive;
     }
+
+    // This method merging zero massive and pyramid massive into one
     private static int[][] merging(int [][] massive, int [][] zero) {
         int startIndex = massive[massive.length -1].length / 2;
         for (int i = 0; i < zero.length; i++){
