@@ -12,9 +12,7 @@ The exam includes 3 tasks to be done: [Calculator](/tasks/Calculator.md), [Pyram
 ### Result ###
 
 * Author name : {Alexander Usachev}
-* Codeship : {PUT YOUR CODESHIP BAGDE HERE}
-
-[ ![Codeship Status for tschool/javaschoolexam](https://app.codeship.com/projects/cc3c4b91-bdec-4936-b1f9-6fcb78709171/builds/9a6f16ed-4958-40be-9ed4-dd7c42be4e8b?component=95cacfe9-d8ad-42f2-a2ac-1e33ee486005_1613849733_combined)](https://app.codeship.com/projects/cc3c4b91-bdec-4936-b1f9-6fcb78709171/builds/9a6f16ed-4958-40be-9ed4-dd7c42be4e8b?component=95cacfe9-d8ad-42f2-a2ac-1e33ee486005_1613849733_combined)
+* Codeship : [![Codeship Status for alexusachev1999/Test-task-DT](https://app.codeship.com/projects/cc3c4b91-bdec-4936-b1f9-6fcb78709171/status?branch=master)](https://app.codeship.com/projects/429622)
 
 
 ### How to start?  ###
